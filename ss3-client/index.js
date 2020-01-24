@@ -229,7 +229,7 @@ SS3Client.prototype.initSubId = function() {
 SS3Client.prototype.setState = function(state) {
   var url = this.v2
     ? "https://api.simplisafe.com/v1/subscriptions/" +
-      this.Obj.subId +
+      thisObj.subId +
       "/state?state =" +
       state
     : "https://api.simplisafe.com/v1/ss3/subscriptions/" +
