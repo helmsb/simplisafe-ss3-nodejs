@@ -16,7 +16,7 @@ function logErr(msg, err) {
   log(fullMsg);
 }
 
-function SS3Client(username, password, retryInSec, retries, loggerFunc, v2) {
+function SS3Client(username, password, retryInSec, retries, v2, loggerFunc) {
   this.username = username;
   this.password = password;
   this.retryInSec = retryInSec || 1;
