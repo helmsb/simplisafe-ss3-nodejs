@@ -227,6 +227,8 @@ SS3Client.prototype.initSubId = function() {
  * @returns {*|PromiseLike<T>|Promise<T>}
  */
 SS3Client.prototype.setState = function(state) {
+  var thisObj = this;
+
   var url = this.v2
     ? "https://api.simplisafe.com/v1/subscriptions/" +
       thisObj.subId +
@@ -237,7 +239,6 @@ SS3Client.prototype.setState = function(state) {
       "/state/" +
       state;
 
-  var thisObj = this;
   var reqOptions = {
     url: url,
     json: true,
